@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/create}" th:object="${inputquestion}">
+  <label for="question">Вопрос</label><br>
+    <textarea type="text" th:field="*{question}" placeholder="введите вопрос" id="question" cols="80" rows="7" ></textarea><br><br>
+<!--    <input type="text" th:field="*{question}" placeholder="Имя" id="question"><br><br>-->
+  <input type="submit" name="submit" value="отправить">
+</form>
+</body>
+</html>

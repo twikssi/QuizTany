@@ -6,6 +6,28 @@
 </head>
 <body>
 
+<br><br><br><br>
+<form  id="myForm" method="post">
+    <label for="name">Вопрос</label>
+    <input type="text" name="name" placeholder="Имя" id="name"><br><br>
+
+
+    <input type="radio" name="state" id="male" value="Мужской">
+    <label for="male">Мужской</label>
+    <input type="radio" name="state" id="female" value="Женский">
+    <label for="female"> Женский</label><br><br>
+    <div id="error" style="color: red"></div>
+    <input type="submit" name="submit" value="готово">
+</form>
+
+
+<!--<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">-->
+<!--<label for="vehicle1"> I have a bike</label><br>-->
+<!--<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">-->
+<!--<label for="vehicle2"> I have a car</label><br>-->
+<!--<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">-->
+<!--<label for="vehicle3"> I have a boat</label><br>-->
+
 <div th:each="question : ${questions}">
     <div th:text="${question.getQuestion}"/>
         <div th:text="${question.getAnswers}"/>
